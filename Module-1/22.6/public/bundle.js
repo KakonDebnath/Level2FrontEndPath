@@ -7968,12 +7968,20 @@ const Test2 = () => {
 };
 
 // rollup main.js --file bundle.js --format esm
+// const App = () => {
+//   return React.createElement(
+//     "div",
+//     { style: { border: "1px solid black" } },
+//     "",
+//     HelloTest(),
+//     HelloTest2(),
+//     Test(),
+//     Test2()
+//   );
+// };
+
 const App = () => {
-  return /*#__PURE__*/React.createElement("div", {
-    style: {
-      border: "1px solid black"
-    }
-  }, "", HelloTest(), HelloTest2(), Test(), Test2());
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(HelloTest, null), /*#__PURE__*/React.createElement(HelloTest2, null), /*#__PURE__*/React.createElement(Test, null), /*#__PURE__*/React.createElement(Test2, null));
 };
 const root = client.createRoot(document.getElementById("root"));
 root.render( /*#__PURE__*/React.createElement(App, null));
