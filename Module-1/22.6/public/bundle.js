@@ -7977,6 +7977,10 @@ const Test2 = () => {
   }, "Test 2 jsx");
 };
 
+const App = () => {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(HelloTest, null), /*#__PURE__*/React.createElement(HelloTest2, null), /*#__PURE__*/React.createElement(Test, null), /*#__PURE__*/React.createElement(Test2, null));
+};
+
 // rollup main.js --file bundle.js --format esm
 // const App = () => {
 //   return React.createElement(
@@ -7990,8 +7994,16 @@ const Test2 = () => {
 //   );
 // };
 
-const App = () => {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(HelloTest, null), /*#__PURE__*/React.createElement(HelloTest2, null), /*#__PURE__*/React.createElement(Test, null), /*#__PURE__*/React.createElement(Test2, null));
-};
+// const App = ()=>{
+//   return (
+//     <div>
+//       <HelloTest />
+//       <HelloTest2 />
+//       <Test />
+//       <Test2 />
+//     </div>
+//   )
+// }
+
 const root = client.createRoot(document.getElementById("root"));
 root.render( /*#__PURE__*/React.createElement(App, null));

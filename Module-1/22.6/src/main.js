@@ -2,8 +2,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { HelloTest, HelloTest2 } from "./another";
-import { Test, Test2 } from "./test";
+// import { HelloTest, HelloTest2 } from "./another";
+// import { Test, Test2 } from "./test";
+import App from "./App";
 // const App = () => {
 //   return React.createElement(
 //     "div",
@@ -16,16 +17,16 @@ import { Test, Test2 } from "./test";
 //   );
 // };
 
-const App = ()=>{
-  return (
-    <div>
-      <HelloTest />
-      <HelloTest2 />
-      <Test />
-      <Test2 />
-    </div>
-  )
-}
+// const App = ()=>{
+//   return (
+//     <div>
+//       <HelloTest />
+//       <HelloTest2 />
+//       <Test />
+//       <Test2 />
+//     </div>
+//   )
+// }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
