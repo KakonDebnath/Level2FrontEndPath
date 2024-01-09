@@ -7959,12 +7959,22 @@ const Test = () => {
     }
   }, "Test File Test Component");
 };
+// export const Test2 = () => {
+//   return React.createElement(
+//     "h4",
+//     { style: { color: "red" } },
+//     "Test File Test2 Component"
+//   );
+// };
+
+const test2Style = {
+  color: "red",
+  fontSize: "30px"
+};
 const Test2 = () => {
   return /*#__PURE__*/React.createElement("h4", {
-    style: {
-      color: "red"
-    }
-  }, "Test File Test2 Component");
+    style: test2Style
+  }, "Test 2 jsx");
 };
 
 // rollup main.js --file bundle.js --format esm

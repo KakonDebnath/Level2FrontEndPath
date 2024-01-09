@@ -7,10 +7,19 @@ export const Test = () => {
     "Test File Test Component"
   );
 };
-export const Test2 = () => {
-  return React.createElement(
-    "h4",
-    { style: { color: "red" } },
-    "Test File Test2 Component"
-  );
-};
+// export const Test2 = () => {
+//   return React.createElement(
+//     "h4",
+//     { style: { color: "red" } },
+//     "Test File Test2 Component"
+//   );
+// };
+
+const test2Style = {
+  color: "red",
+  fontSize: "30px",
+}
+
+export const Test2 = ()=>{
+  return <h4 style={test2Style}>Test 2 jsx</h4>
+}
