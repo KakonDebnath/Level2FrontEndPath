@@ -1,8 +1,11 @@
-import { useState } from "react";
 
-const UseStateEx = () => {
+type TCounter = {
+  counter: number;
+  setCounter: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const UseStateEx = ({ counter, setCounter }: TCounter) => {
   console.log("click");
-  const [counter, setCounter] = useState(0);
 
   const handleIncrement = () => {
     setCounter((prevCounter) => prevCounter + 1);
