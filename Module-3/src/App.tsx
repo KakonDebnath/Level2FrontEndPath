@@ -4,6 +4,7 @@ import FormEx from "./pages/FormEx";
 import FormExObj from "./pages/FromExObj";
 import { TThemeContext, ThemeContext } from "./context/ThemeProvider";
 import { MenuItems, MenuList } from "./components/Menu";
+import UserContainer from "./components/UserContainer";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -21,6 +22,8 @@ function App() {
       <MenuList>
         <MenuItems></MenuItems>
       </MenuList>
+
+      <UserContainer />
     </div>
   );
 }
