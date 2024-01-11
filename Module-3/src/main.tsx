@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import App from './App.tsx'
 import "./index.css";
-import UseRefEx from "./pages/UseRefEx";
+
+import ThemeProvider from "./context/ThemeProvider";
+import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <UseRefEx />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
