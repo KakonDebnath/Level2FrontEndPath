@@ -1,3 +1,4 @@
+import Button from "./components/ui/Button";
 import Container from "./components/ui/Container";
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
     <Container>
       {/* <MainLayout /> */}
       <div className="h-screen w-full flex justify-center items-center">
-        <button className="btn btn-cyan">Click Me</button>
+        <Button className={'bg-red-500'} outline={true}>Click Me</Button>
       </div>
     </Container>
   );
