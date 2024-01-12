@@ -1,8 +1,8 @@
-import React from 'react';
+
 
 const Navbar = () => {
     return (
-        <div>
+        <div className="h-16 w-full bg-green-300">
             Navbar
         </div>
     );
