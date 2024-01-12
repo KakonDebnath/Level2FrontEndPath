@@ -1,8 +1,12 @@
-import clsx from "clsx";
-import { twMerge } from "tailwind-merge";
 import cn from "../../utils/cn";
 
-const Button = ({children, className, outline }) => {
+type TButton = {
+  children: string;
+  className: string;
+  outline: boolean;
+};
+
+const TestButton = ({ children, className, outline }: TButton) => {
   return (
     <button
       //   className={twMerge(
@@ -17,8 +21,10 @@ const Button = ({children, className, outline }) => {
         },
         className
       )}
-    >{children}</button>
+    >
+      {children}
+    </button>
   );
 };
 
-export default Button;
+export default TestButton;
