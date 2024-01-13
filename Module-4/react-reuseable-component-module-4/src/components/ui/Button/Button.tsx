@@ -1,7 +1,7 @@
 import { forwardRef, ButtonHTMLAttributes, ReactNode, Ref } from "react";
-import cn from "../../utils/cn";
+import cn from "../../../utils/cn";
 
-type TVariant = "solid" | "outline"| "link";
+type TVariant = "solid" | "outline" | "link";
 type TAnimate = "fade" | "zoom";
 type TButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: TVariant;
@@ -11,7 +11,13 @@ type TButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const Button = forwardRef(
   (
-    { children="Click Me", className, variant, animate, ...rest }: TButtonProps,
+    {
+      children = "Click Me",
+      className,
+      variant,
+      animate,
+      ...rest
+    }: TButtonProps,
     ref: Ref<HTMLButtonElement>
   ) => {
     const getVariant = (variant?: TVariant) => {

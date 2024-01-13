@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Button from "./components/ui/Button";
-import Container from "./components/ui/Container";
-import Modal from "./components/ui/Modal";
-import LoadingButton from "./components/ui/LoadingButton";
+import Button from "./components/ui/Button/Button";
+import Container from "./components/ui/Container/Container";
+import Modal from "./components/ui/Modal/Modal";
+import LoadingButton from "./components/ui/Button/LoadingButton";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -21,8 +21,8 @@ function App() {
           </Modal.Header>
           <h3>This is modal</h3>
         </Modal>
-      <Button></Button>
-      <LoadingButton></LoadingButton>
+        <Button></Button>
+        <LoadingButton></LoadingButton>
       </div>
     </Container>
   );

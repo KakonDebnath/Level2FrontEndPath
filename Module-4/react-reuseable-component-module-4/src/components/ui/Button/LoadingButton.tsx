@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import cn from "../../utils/cn";
 import { HiMiniArrowPath } from "react-icons/hi2";
+import cn from "../../../utils/cn";
 
 type TLoadingButton = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children?: React.ReactNode;
