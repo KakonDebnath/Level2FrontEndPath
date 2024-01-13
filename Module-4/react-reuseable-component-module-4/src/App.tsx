@@ -6,7 +6,7 @@ function App() {
     <Container>
       {/* <MainLayout /> */}
       <div className="h-screen w-full flex justify-center items-center">
-        <Button variant="" className="">Click Me</Button>
+        <Button>Click Me</Button>
       </div>
     </Container>
   );

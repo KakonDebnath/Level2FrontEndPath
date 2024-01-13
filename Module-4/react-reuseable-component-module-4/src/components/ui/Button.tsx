@@ -1,23 +1,35 @@
+import { forwardRef, ButtonHTMLAttributes, ReactNode, Ref } from "react";
 import cn from "../../utils/cn";
 
-type TButton = {
-  children: string;
-  className: string;
-  variant: string;
+type TVariant = "solid" | "outline";
+type TButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: TVariant;
+  children?: ReactNode;
 };
 
-const Button = ({ children, className, variant }: TButton) => {
-  const getVariant = (variant: string) => {
-    switch (variant) {
-      case "outline":
-        return "btn-outline";
-      default:
-        return "btn-solid";
-    }
-  };
-  return (
-    <button className={cn(getVariant(variant), className)}>{children}</button>
-  );
-};
+const Button = forwardRef(
+  (
+    { children, className, variant, ...rest }: TButtonProps,
+    ref: Ref<HTMLButtonElement>
+  ) => {
+    const getVariant = (variant?: TVariant) => {
+      switch (variant) {
+        case "outline":
+          return "btn-outline";
+        default:
+          return "btn-solid";
+      }
+    };
+    return (
+      <button
+        ref={ref}
+        {...rest}
+        className={cn(getVariant(variant), className)}
+      >
+        {children}
+      </button>
+    );
+  }
+);
 
 export default Button;
