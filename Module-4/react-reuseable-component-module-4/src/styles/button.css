@@ -1,17 +1,45 @@
 @layer components {
     .btn-solid {
-        @apply px-3 py-2 font-semibold rounded-md;
+        @apply px-3 py-2 rounded-md;
         @apply bg-blue-500 hover:bg-blue-600 focus:bg-blue-600;
         @apply transition-all duration-300;
         @apply text-white;
     }
+
     .btn-outline {
-        @apply px-3 py-2 font-semibold rounded-md;
+        @apply px-3 py-2 rounded-md;
         @apply border border-blue-400 bg-opacity-10;
         @apply text-blue-400;
         @apply focus:border-blue-600 focus:text-blue-600;
         @apply hover:border-blue-600 hover:text-blue-600;
         @apply transition-all duration-300;
+    }
+
+    .btn-link {
+        @apply bg-transparent text-black p-0;
+        @apply hover:underline hover:bg-transparent;
+        @apply focus:underline;
+    }
+
+
+    @keyframes fade {
+        50% {
+            opacity: .6;
+        }
+    }
+
+    .animate-fade {
+        animation: fade 300ms ease-in 1;
+    }
+
+    @keyframes scale {
+        to {
+            transform: scale(1.05);
+        }
+    }
+
+    .animate-scale {
+        animation: scale 300ms ease-in 1;
     }
 
 }
