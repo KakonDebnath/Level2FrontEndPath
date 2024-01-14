@@ -3,13 +3,26 @@ import Button from "./components/ui/Button/Button";
 import Container from "./components/ui/Container/Container";
 import Modal from "./components/ui/Modal/Modal";
 import LoadingButton from "./components/ui/Button/LoadingButton";
-import Accordion from "./components/ui/Acordion/Accordion";
+import Accordion from "./components/ui/Accordion/Accordion";
 
 function App() {
   const [modal, setModal] = useState(false);
   const handleModalClose = () => {
     setModal((previous) => !previous);
   };
+
+  const accordionItems = [
+    {
+      title: "How do I create an account?",
+      description:
+        'To create an account, click on the "Sign Up" button and fill out the required information. Once done, you can enjoy the benefits of being a registered member.',
+    },
+    {
+      title: "How do I reset my password?",
+      description:
+        'To reset your password, click on the "Forgot Password" link on the login page and follow the instructions sent to your email.',
+    },
+  ];
   return (
     <Container>
       {/* <MainLayout /> */}
@@ -24,7 +37,7 @@ function App() {
         </Modal>
         <Button></Button>
         <LoadingButton></LoadingButton>
-        <Accordion />
+        <Accordion items={accordionItems}/>
       </div>
     </Container>
   );
