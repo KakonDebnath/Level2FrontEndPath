@@ -3,6 +3,7 @@ import Button from "./components/ui/Button/Button";
 import Container from "./components/ui/Container/Container";
 import Modal from "./components/ui/Modal/Modal";
 import LoadingButton from "./components/ui/Button/LoadingButton";
+import Accordion from "./components/ui/Acordion/Accordion";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -12,7 +13,7 @@ function App() {
   return (
     <Container>
       {/* <MainLayout /> */}
-      <div className="h-screen w-full flex justify-center items-center">
+      <div className="w-full">
         <Button onClick={() => setModal((prev) => !prev)}>Open Modal</Button>
         <Modal isOpen={modal} onClose={handleModalClose}>
           <Modal.Header>
@@ -23,6 +24,7 @@ function App() {
         </Modal>
         <Button></Button>
         <LoadingButton></LoadingButton>
+        <Accordion />
       </div>
     </Container>
   );
