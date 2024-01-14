@@ -21,7 +21,7 @@ const Accordion = ({ items, className }: TAccordionProps) => {
   return (
     <div className={cn("border rounded-lg font-sans mx-4", className)}>
       {items?.map((item, index) => (
-        <div key={index} className="p-4">
+        <div key={index} className="p-4 border-b">
           <button
             onClick={() => toggle(index)}
             className="flex justify-between items-center py-4 w-full h-full"

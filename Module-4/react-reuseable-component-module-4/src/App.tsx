@@ -4,6 +4,7 @@ import Container from "./components/ui/Container/Container";
 import Modal from "./components/ui/Modal/Modal";
 import LoadingButton from "./components/ui/Button/LoadingButton";
 import Accordion from "./components/ui/Accordion/Accordion";
+import NormalForm from "./components/ui/NormalForm/NormalForm";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -27,17 +28,16 @@ function App() {
     <Container>
       {/* <MainLayout /> */}
       <div className="w-full">
-        <Button onClick={() => setModal((prev) => !prev)}>Open Modal</Button>
+        {/* <Button onClick={() => setModal((prev) => !prev)}>Open Modal</Button>
         <Modal isOpen={modal} onClose={handleModalClose}>
           <Modal.Header>
             <h2>Modal Header</h2>
             <Modal.CloseButton></Modal.CloseButton>
           </Modal.Header>
           <h3>This is modal</h3>
-        </Modal>
+        </Modal> */}
         <Button></Button>
-        <LoadingButton></LoadingButton>
-        <Accordion items={accordionItems}/>
+        <NormalForm />
       </div>
     </Container>
   );
