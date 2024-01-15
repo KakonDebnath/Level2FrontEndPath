@@ -68,10 +68,12 @@ const NormalForm = () => {
           <input type="checkbox" id="ts" {...register("ts")} /> TS
           <input type="checkbox" id="react" {...register("react")} /> REACT
         </div>
-        <div className={cn("flex justify-end w-full", {
+        <div className={cn("flex justify-end w-full max-w-md", {
           "md:col-start-2": double
         })}>
-          <Button type="submit">Submit</Button>
+          <Button className={cn("w-full",{
+            "md:w-fit": double
+          })} type="submit">Submit</Button>
         </div>
       </div>
     </form>
