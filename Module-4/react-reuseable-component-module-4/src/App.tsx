@@ -1,44 +1,53 @@
-import { useState } from "react";
-import Button from "./components/ui/Button/Button";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Container from "./components/ui/Container/Container";
-import Modal from "./components/ui/Modal/Modal";
-import LoadingButton from "./components/ui/Button/LoadingButton";
-import Accordion from "./components/ui/Accordion/Accordion";
-import NormalForm from "./components/ui/NormalForm/NormalForm";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import {
+  Form,
+  FormSection,
+  FormSubmit,
+  Input,
+} from "./components/ui/ReuseableForm";
+import {
+  FormZodSchema,
+  TFormValidationType,
+} from "./components/ui/ReuseableForm/formValidation";
 
 function App() {
-  const [modal, setModal] = useState(false);
-  const handleModalClose = () => {
-    setModal((previous) => !previous);
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<TFormValidationType>({
+    resolver: zodResolver(FormZodSchema),
+  });
+
+  const onSubmit = (data: FieldValues) => {
+    console.log(data);
   };
 
-  const accordionItems = [
-    {
-      title: "How do I create an account?",
-      description:
-        'To create an account, click on the "Sign Up" button and fill out the required information. Once done, you can enjoy the benefits of being a registered member.',
-    },
-    {
-      title: "How do I reset my password?",
-      description:
-        'To reset your password, click on the "Forgot Password" link on the login page and follow the instructions sent to your email.',
-    },
-  ];
   return (
     <Container>
       {/* <MainLayout /> */}
-      <div className="w-full">
-        {/* <Button onClick={() => setModal((prev) => !prev)}>Open Modal</Button>
-        <Modal isOpen={modal} onClose={handleModalClose}>
-          <Modal.Header>
-            <h2>Modal Header</h2>
-            <Modal.CloseButton></Modal.CloseButton>
-          </Modal.Header>
-          <h3>This is modal</h3>
-        </Modal> */}
-        <Button></Button>
-        <NormalForm />
-      </div>
+      <Form onSubmit={handleSubmit(onSubmit) as SubmitHandler<FieldValues>}>
+        <FormSection>
+          <Input
+            lebel={"Name"}
+            type={"text"}
+            register={register("name")}
+            errors={errors}
+          ></Input>
+          <Input
+            lebel={"Email"}
+            type={"email"}
+            register={register("email")}
+            errors={errors}
+          ></Input>
+        </FormSection>
+        <FormSection>
+          <FormSubmit />
+        </FormSection>
+      </Form>
     </Container>
   );
 }
