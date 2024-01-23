@@ -1,11 +1,12 @@
 // import './App.css'
 
-import { Button } from "./components/ui/button";
+import MainLayout from "./components/layouts/MainLayout";
+
 
 function App() {
   return (
     <div>
-      <Button>Click me</Button>
+      <MainLayout></MainLayout>
     </div>
   );
 }
