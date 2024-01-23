@@ -1,0 +1,64 @@
+.main {
+    width: 600px;
+    height: 100vh;
+    border: 1px solid red;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+}
+
+.top {
+    width: 200px;
+    height: 400px;
+    background-color: blue;
+    position: absolute;
+}
+
+.bottom {
+    width: 100px;
+    height: 400px;
+    background-color: red;
+    position: absolute;
+    transform: rotateY(0deg);
+    transform-origin: left;
+    transition: all 0.5s;
+}
+.bottom-2 {
+    width: 100px;
+    height: 400px;
+    background-color: red;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    transform: rotateY(0deg);
+    transform-origin: right;
+    transition: all 0.5s;
+}
+
+.main:hover .bottom {
+    transform: rotateY(50deg);
+}
+.main:hover .bottom-2 {
+    transform: rotateY(-50deg);
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border: 4px solid black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 80px;
+}
+.circle-2{
+    width: 20px;
+    height: 20px;
+    border: 4px solid black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    right: 80px;
+}

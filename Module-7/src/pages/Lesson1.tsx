@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 const test = {
   hide: { opacity: 0, scale: 0.5 },
   show: { opacity: 1, scale: 1 },
+  
 };
 const child = {
   hide: { opacity: 0, scale: 0.5 },

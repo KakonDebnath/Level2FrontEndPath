@@ -1,5 +1,5 @@
 import "./App.css";
-import Lesson1 from "./pages/lesson1";
+import Lesson1 from "./pages/Lesson1";
 
 function App() {
   return (

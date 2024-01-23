@@ -1,53 +1,22 @@
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Container from "./components/ui/Container/Container";
-import { zodResolver } from "@hookform/resolvers/zod";
 
-import {
-  Form,
-  FormSection,
-  FormSubmit,
-  Input,
-} from "./components/ui/ReuseableForm";
-import {
-  FormZodSchema,
-  TFormValidationType,
-} from "./components/ui/ReuseableForm/formValidation";
+import { Accordion1 } from "./components/ui/Accordion/Accordion1";
+import Accordion2 from "./components/ui/Accordion/Accordion2";
+import MainLayout from "./components/Layout/MainLayout/MainLayout";
+
+const items = [
+  { title: "Accordion 1", description: "lorem ipsum dolor sit amet" },
+  { title: "Accordion 2", description: "lorem ipsum dolor sit amet" },
+];
 
 function App() {
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm<TFormValidationType>({
-    resolver: zodResolver(FormZodSchema),
-  });
-
-  const onSubmit = (data: FieldValues) => {
-    console.log(data);
-  };
-
   return (
     <Container>
       {/* <MainLayout /> */}
-      <Form onSubmit={handleSubmit(onSubmit) as SubmitHandler<FieldValues>}>
-        <FormSection>
-          <Input
-            lebel={"Name"}
-            type={"text"}
-            register={register("name")}
-            errors={errors}
-          ></Input>
-          <Input
-            lebel={"Email"}
-            type={"email"}
-            register={register("email")}
-            errors={errors}
-          ></Input>
-        </FormSection>
-        <FormSection>
-          <FormSubmit />
-        </FormSection>
-      </Form>
+
+      <Accordion2></Accordion2>
+      {/* <div className="w-10 h-10 animate-[spin_1s_linear_infinite] rounded-full border-double border-4 border-r-0 border-l-0 border-b-sky-400 border-t-sky-700"></div> */}
+      <div className="w-10 h-10 border-double border-4 border-r-0 border-l-0 border-b-sky-400 border-t-sky-700 rounded-full animate-[spin_1s_linear_infinite] "></div>
     </Container>
   );
 }
