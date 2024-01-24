@@ -5,7 +5,7 @@ import MainLayout from "./components/layouts/MainLayout";
 
 function App() {
   return (
-    <div>
+    <div className="">
       <MainLayout></MainLayout>
     </div>
   );
