@@ -1,13 +1,13 @@
 // import './App.css'
 
-import MainLayout from "./components/layouts/MainLayout";
+import MainLayout from "./components/ui/layouts/mainLayout/MainLayout";
 
 
 function App() {
   return (
-    <div className="">
+    <>
       <MainLayout></MainLayout>
-    </div>
+    </>
   );
 }
 
