@@ -1,16 +1,20 @@
 import { getServicesData } from '@/api/admin/service/service.api';
 import { useQuery } from '@tanstack/react-query';
 
-
 const ServiceList = () => {
-  const { isLoading, data } = useQuery({
+  const { isError, isLoading, data } = useQuery({
     queryKey: ['services'],
     queryFn: getServicesData,
   });
 
-  if(isLoading) {
-    return <p>Loading...</p>
+  if (isLoading) {
+    return <p>Loading...</p>;
   }
+  // if (isError) {
+  //   return <p>SomeThing Went wrong</p>;
+  // }
+
+  console.log("loading:", isLoading,"error", isError, data);
 
   return (
     <div>
