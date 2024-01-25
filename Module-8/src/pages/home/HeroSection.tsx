@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import macbook from "@/assets/images/macbook-exposed.png";
-import { motion } from "framer-motion";
+import { Button } from '@/components/ui/button';
+import macbook from '@/assets/images/macbook-exposed.png';
+import { motion } from 'framer-motion';
 
 const heroText = {
   hidden: { opacity: 0 },
@@ -24,7 +24,7 @@ const heroTextChildren = {
     y: 0,
     transition: {
       duration: 0.7,
-      type: "spring",
+      type: 'spring',
       bounce: 0.5,
     },
   },
@@ -41,8 +41,8 @@ const heroImage = {
       y: {
         duration: 2,
         repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut",
+        repeatType: 'reverse',
+        ease: 'easeInOut',
       },
     },
   },
@@ -62,7 +62,7 @@ const HeroSection = () => {
           variants={heroTextChildren}
           className="md:text-7xl lg:text-8xl font-bold"
         >
-          <span className="text-gray">Don't worry.</span> <br />{" "}
+          <span className="text-gray">Don't worry.</span> <br />{' '}
           <span>We'll fix it.</span>
         </motion.h1>
         <motion.p
@@ -70,7 +70,7 @@ const HeroSection = () => {
           className="text-dark-gray text-base md:text-xl max-w-[40ch] my-5"
         >
           Welcome to <span className="text-black font-semibold">iRepair</span>,
-          your one-stop place for all kinds of{" "}
+          your one-stop place for all kinds of{' '}
           <span className="text-black font-semibold">Macbook repairs</span> and
           diagnostics.
         </motion.p>

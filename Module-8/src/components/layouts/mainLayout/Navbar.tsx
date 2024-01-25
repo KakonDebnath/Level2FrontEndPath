@@ -1,7 +1,7 @@
-import Container from "@/components/container/Container";
-import { NavLink } from "react-router-dom";
-import { Button } from "../../button";
-import { motion } from "framer-motion";
+import Container from '@/components/container/Container';
+import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   return (
@@ -9,7 +9,7 @@ const Navbar = () => {
       <motion.header
         initial={{ opacity: 0, x: -500 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 1, type: "spring", bounce: 0.5 }}
+        transition={{ duration: 1, delay: 1, type: 'spring', bounce: 0.5 }}
         className="flex justify-between items-center py-4"
       >
         <h2 className="text-3xl">

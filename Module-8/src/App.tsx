@@ -1,12 +1,11 @@
 // import './App.css'
 
-import MainLayout from "./components/ui/layouts/mainLayout/MainLayout";
-
+import MainLayout from './components/layouts/mainLayout/MainLayout';
 
 function App() {
   return (
     <>
-      <MainLayout></MainLayout>
+      <MainLayout />
     </>
   );
 }

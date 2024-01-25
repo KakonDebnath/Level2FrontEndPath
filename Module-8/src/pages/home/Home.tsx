@@ -1,5 +1,5 @@
-import Container from "@/components/container/Container";
-import HeroSection from "./HeroSection";
+import Container from '@/components/container/Container';
+import HeroSection from './HeroSection';
 
 const Home = () => {
   return (
